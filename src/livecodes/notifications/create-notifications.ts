@@ -6,7 +6,7 @@ import {
   dangerTheme,
   closeButton,
   acceptButton,
-  lightTheme,
+  darkTheme,
 } from './snackbar';
 
 export const createNotifications = () => {
@@ -60,7 +60,7 @@ export const createNotifications = () => {
       },
     };
     createSnackbar(message, {
-      theme: lightTheme,
+      theme: darkTheme,
       actions: [confirmAction, cancelAction],
     });
   };

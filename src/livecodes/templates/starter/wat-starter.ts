@@ -2,7 +2,7 @@ import type { Template } from '../../models';
 
 export const watStarter: Template = {
   name: 'wat',
-  title: 'WebAssembly Text Starter',
+  title: 'WebAssembly Text',
   thumbnail: 'assets/templates/webassembly.svg',
   activeEditor: 'script',
   markup: {

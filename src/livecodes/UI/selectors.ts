@@ -113,6 +113,7 @@ export const getCssPresetLinks = /* @__PURE__ */ () =>
 
 export const getSettingsMenuScroller = /* @__PURE__ */ () =>
   document.querySelector<HTMLElement>('#settings-menu-container');
+
 export const getSettingsButton = /* @__PURE__ */ () =>
   document.querySelector<HTMLElement>('#settings-button');
 

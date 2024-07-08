@@ -6,6 +6,7 @@ import { allowedOrigin } from '../services/allowed-origin';
 import { copyToClipboard, getAbsoluteUrl } from '../utils/utils';
 import { generateQrCode } from './qrcode';
 import { getQrCodeContainer } from './selectors';
+import { copy as copyIcon } from '../UI/icons';
 
 interface Service {
   name: string;
@@ -28,7 +29,7 @@ export const createShareContainer = async (
     }
     setMessage('URL copied to clipboard');
     messageTimeout = setTimeout(() => {
-      setMessage('Click to copy');
+      setMessage(`${copyIcon} Click to copy`);
     }, 5000);
   };
 
@@ -93,7 +94,8 @@ export const createShareContainer = async (
     if (input) {
       input.value = shareData.url;
     }
-    setMessage('Click to copy');
+    // setMessage('Click to copy');
+    setMessage(`${copyIcon} Click to copy`);
   };
 
   const services: Service[] = [
