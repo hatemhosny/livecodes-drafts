@@ -143,6 +143,7 @@ LiveCodes uses services that are generously provided by:
   <img alt="Cloudflare Pages" width="200" src="https://dev.livecodes.io/docs/img/credits/cloudflare-pages.svg">
 </img></a><br /><br />
 </p>
+
 <p>
 <a href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr">
   <img alt="jsDelivr" width="200" src="https://dev.livecodes.io/docs/img/credits/jsdelivr.svg">
