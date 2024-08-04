@@ -149,27 +149,6 @@ import {
 } from './i18n/utils';
 import type { I18nTranslationTemplate } from './i18n/locales/models';
 
-// declare global dependencies
-declare global {
-  interface Window {
-    deps: {
-      showMode: typeof showMode;
-      /**
-       * String-level i18n helper function.
-       * @param key The key of the translation.
-       * @param value The default value to translate.
-       * @param args The interpolation object.
-       * @returns The translated string.
-       */
-      translateString: <Key extends I18nKeyType, Value extends string>(
-        key: Key,
-        value: I18nValueType<Key, Value>,
-        ...args: I18nInterpolationType<I18nValueType<Key, Value>>
-      ) => string;
-    };
-  }
-}
-
 const stores: Stores = createStores();
 const eventsManager = createEventsManager();
 let notifications: ReturnType<typeof createNotifications>;
@@ -523,7 +502,7 @@ const updateEditors = async (editors: Editors, config: Config) => {
   }
 };
 
-const showMode = (mode?: Config['mode']) => {
+export const showMode = (mode?: Config['mode']) => {
   if (!mode) {
     mode = 'full';
   }
